@@ -53,6 +53,11 @@ app.get('/admin', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/dist', 'index.html'));
 })
 
+app.get('/rezerwacja/:id', (req, res) => {
+    const reservationId = req.params.id;
+    res.sendFile(path.join(__dirname, 'public/dist', 'index.html'));
+}
+
 app.use('/docs', swaggerUI.serve, swaggerUI.setup(specs));
 app.use('/api/v1/movies', moviesRouter)
 app.use('/api/v1/rooms', roomsRouter)
