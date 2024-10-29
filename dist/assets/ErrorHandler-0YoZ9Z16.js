@@ -1,0 +1,1 @@
+class n extends Error{constructor(e){super(e),this.name="CustomError"}}const s=r=>new n(r),a=(r,e)=>{if(r.response){const o=r.response.data.Error||r.response.data.error;console.error("Błąd:",o),e.value=s(o)}else console.error("Nieznany błąd. Spróbuj ponownie później."),e.value=s("Nieznany błąd. Spróbuj ponownie później.")};export{a as h};
